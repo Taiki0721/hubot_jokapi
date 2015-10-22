@@ -16,7 +16,7 @@
 //
 module.exports = function(robot) {
   robot.brain.data.dialogue = {};
-  return robot.hear(/.*/, function(res) {
+  return robot.respond(/.*/, function(res) {
     var ctx, p, payload, ref, room_id;
     p = parseFloat((ref = process.env.HUBOT_DOCOMO_DIALOGUE_P) != null ? ref : '0.3');
     if (!(Math.random() < p)) {
